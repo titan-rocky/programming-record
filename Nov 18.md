@@ -30,17 +30,19 @@ a
 #include "stdlib.h"
 
 int main( int argc, char *argv[] ){
-    int a = atoi("100");
-    printf("%d",a);
+    char temp[20];
+    gcvt(23.45,2,temp);
+    printf("%s",temp);
     return 0;
 }
 ```
 
 #### Output
 ```
-100
+23
 ```
 #### Explanation
+`gcvt` function converts floating point to strings. 2 is the no of significant digits. The string will be stored in temp. 
 
 ### 3.
 ```c
@@ -77,6 +79,7 @@ int main() {
 ```
 cppbuzzcppbuzz
 ```
+Times=2
 #### Explanation
 - `printf` gets executed and returns the number of characters written in stdout.
 - `printf("cppbuzz")` gets executed first in the if statement, printing a cppbuzz
